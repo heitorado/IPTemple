@@ -1,0 +1,129 @@
+* 
+{ 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+}
+
+a { color: inherit; } 
+     
+body 
+{ 
+	/*font: 13px Helvetica, Arial;*/
+	font-family: 'Ubuntu', sans-serif;
+	background-image: url(https://wallpaperscraft.com/image/club_computers_row_table_80015_2560x1600.jpg);
+	background-image: url(https://images7.alphacoders.com/546/546187.jpg);
+	background-image: url(https://i.pinimg.com/originals/7c/34/48/7c3448212f10f7558668324aca034703.png);
+	/*
+	background-image: url(https://i.pinimg.com/originals/59/35/5f/59355f751c1e3698cc6360b1a7390094.jpg);
+	*/
+
+	background-position: center center;
+	margin: auto;
+	margin-bottom: 10%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+form 
+{
+	background: transparent; 
+	padding: 10px; 
+	position: fixed; 
+	bottom: 0; 
+	width: 100%;
+
+}
+
+form input 
+{ 
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	border: 0; 
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px; 
+	width: 80%;
+	margin-right: .5%;
+	margin-left: 5%;
+	border-radius: 6px;
+	height: 50px;
+	box-shadow: 4px 4px 8px black;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: rgba(0,0,0,0.3)
+}
+
+form button 
+{ 
+	font-size: 25px;
+	height: 50px;
+	width: 50px; 
+	background: rgb(130, 224, 255);
+	border-radius: 100%;
+	border: none; 
+	padding: 10px;
+	margin-left: 20px;
+
+	transition: 0.5s
+}
+
+form button:hover
+{ 
+	font-size: 30px;
+	height: 55px;
+	width: 55px; 
+}
+
+.typearea
+{
+	align-items: center;
+}
+
+
+
+#messages 
+{ 
+	list-style-type: none; 
+	margin: 10px; 
+	padding: 10px; 
+	border-radius: 5px;
+	/*background-color: white;*/
+}
+
+.msgtext
+{
+	height: 100%;
+	padding: 15px;
+	margin-top: 1%;
+	margin-right: 20%;
+	margin-left: 20%;
+	background-color: white;
+	border-radius: 5px;
+
+	text-align: center;
+	font-size: 32px;
+	word-wrap: break-word;
+	
+	box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s
+}
+
+.msgtext:hover
+{
+	box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+#messages li 
+{ 
+	padding: 5px 10px; 
+}
+
+/*
+#messages li:nth-child(odd) 
+{ 
+	background: #eee; 
+}*/
