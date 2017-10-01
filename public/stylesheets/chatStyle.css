@@ -20,7 +20,7 @@ body
 
 	background-position: center center;
 	margin: auto;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -30,11 +30,11 @@ body
 
 form 
 {
-	background: transparent; 
 	padding: 10px; 
 	position: fixed; 
 	bottom: 0; 
 	width: 100%;
+	margin-top: 100px;
 
 }
 
@@ -78,9 +78,10 @@ form button:hover
 	width: 55px; 
 }
 
-.typearea
+#typearea
 {
 	align-items: center;
+
 }
 
 

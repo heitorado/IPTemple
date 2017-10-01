@@ -46,6 +46,7 @@
         socket.on('chat message', function(msg){
           $('#messages').append($('<div class="msgtext"><p>').text(msg));
           $('#messages').append($('</p></div>'));
+          window.scrollBy(0, 1000000000); //desce a janela
         });
       });
     </script>
