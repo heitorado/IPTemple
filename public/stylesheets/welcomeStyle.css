@@ -78,6 +78,21 @@ body
 	padding-top: 25px;
 }
 
+#myCanvas
+{
+  height:100%;
+  width:100%;
+  max-width:100%;
+  min-width:1600px;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+
+  border-style: solid;
+  border-width:0px;
+  
+}
+
 /*trecos do form*/
 form 
 {
