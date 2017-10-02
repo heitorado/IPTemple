@@ -1,0 +1,130 @@
+* 
+{ 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+}
+
+a { color: inherit; } 
+     
+body 
+{ 
+	/*font: 13px Helvetica, Arial;*/
+	font-family: 'Ubuntu', sans-serif;
+	background-image: url(https://wallpaperscraft.com/image/club_computers_row_table_80015_2560x1600.jpg);
+	background-image: url(https://images7.alphacoders.com/546/546187.jpg);
+	background-image: url(https://i.pinimg.com/originals/7c/34/48/7c3448212f10f7558668324aca034703.png);
+	/*
+	background-image: url(https://i.pinimg.com/originals/59/35/5f/59355f751c1e3698cc6360b1a7390094.jpg);
+	*/
+
+	background-position: center center;
+	margin: auto;
+	margin-bottom: 5%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+/* The animation code */
+@keyframes glowingAura 
+{
+    0%   {box-shadow: 0px 0px 20px 3px yellow;}
+    /*25%  {box-shadow: 0px 0px 5px 3px yellow;}*/
+    50%  {box-shadow: 0px 0px 20px 4px yellow;}
+    /*75%  {box-shadow: 0px 0px 5px 3px yellow;}*/
+    100% {box-shadow: 0px 0px 20px 3px yellow;}
+}
+
+/* The element to apply the animation to */
+.circle
+ {	
+ 	position: fixed;
+ 	text-align: center;
+ 	font-size: 30px;
+ 	word-wrap: break-word;
+ 	border-radius: 50%;
+ 	width: 300px;
+  	height: 300px;
+  	top: 60%;
+  	left: 50%;
+  	margin-top: -150px;
+ 	margin-left: -150px;
+    background-color: white;
+    animation-name: glowingAura;
+    
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+}
+
+.circle p
+{
+	padding-top: 80px;
+}
+
+.welcome
+{
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	margin-top: 50px;
+	text-shadow: 2px 2px rgba(0,0,0,0.5); 
+}
+
+.welcome p
+{
+	padding-top: 25px;
+}
+
+/*trecos do form*/
+form 
+{
+	padding: 10px; 
+	position: fixed; 
+	bottom: 0; 
+	width: 100%;
+	margin-top: 100px;
+
+}
+
+form input 
+{ 
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	border: 0; 
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px; 
+	width: 80%;
+	margin-right: .5%;
+	margin-left: 5%;
+	border-radius: 6px;
+	height: 50px;
+	box-shadow: 4px 4px 8px black;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: rgba(0,0,0,0.3)
+}
+
+form button 
+{ 
+	font-size: 25px;
+	height: 50px;
+	width: 50px; 
+	background: rgb(130, 224, 255);
+	border-radius: 100%;
+	border: none; 
+	padding: 10px;
+	margin-left: 20px;
+
+	transition: 0.5s
+}
+
+form button:hover
+{ 
+	font-size: 30px;
+	height: 55px;
+	width: 55px; 
+}

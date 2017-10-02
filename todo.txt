@@ -1,0 +1,4 @@
+>Animações de fade para as mensagens que chegam
+>welcome page
+>Melhorar design
+>sistema de login para monitores

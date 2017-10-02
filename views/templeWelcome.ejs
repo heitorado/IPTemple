@@ -2,10 +2,33 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/welcomeStyle.css' />
+
+    <!-- custom font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script src="https://use.fontawesome.com/38d7e17bed.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<div class="welcome">
+	    <h1>Welcome to the <%= title %>, pupil.</h1>
+	    <p>What brings you here today?</p>
+	</div>
+
+    <div class="circle">
+    	<p> Type your question below and press the button to send it to the Gods. </p>
+    </div>
+
+
+    <!-- form para envio de mensagens -->
+    <div id="typearea">
+	    <form action="">
+	      <input id="m" autocomplete="off" /><button><a href="#"><i class="fa fa-hand-spock-o" aria-hidden="true"></i></a></button>
+	    </form>
+	</div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </body>
 </html>
