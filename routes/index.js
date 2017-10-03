@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/temple', function(req, res){
-					res.render('templeChat', { title: 'IP Temple' });
+					res.render('templeMessages', { title: 'IP Temple' });
 					});
 
 module.exports = router;

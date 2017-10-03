@@ -28,63 +28,43 @@ body
 	width: 100%;
 }
 
-form 
+#msgCards
 {
-	padding: 10px; 
-	position: fixed; 
-	bottom: 0; 
-	width: 100%;
-	margin-top: 100px;
-
-}
-
-form input 
-{ 
+	word-wrap: break-word;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
-	border: 0; 
-	padding: 10px;
-	padding-left: 25px;
-	padding-right: 25px; 
-	width: 80%;
-	margin-right: .5%;
-	margin-left: 5%;
-	border-radius: 6px;
-	height: 50px;
-	box-shadow: 4px 4px 8px black;
-	border-style: solid;
-	border-width: 0.5px;
-	border-color: rgba(0,0,0,0.3)
-}
-
-form button 
-{ 
-	font-size: 25px;
-	height: 50px;
-	width: 50px; 
-	background: rgb(130, 224, 255);
-	border-radius: 100%;
-	border: none; 
-	padding: 10px;
-	margin-left: 20px;
-
-	transition: 0.5s
-}
-
-form button:hover
-{ 
-	font-size: 30px;
-	height: 55px;
-	width: 55px; 
-}
-
-#typearea
-{
-	align-items: center;
-
 }
 
 
+.exercise-card{
+  margin: 5px 10px; /* separar os card do top (5px) e um do outro (25px)*/
+  width: 250px; /* tamanho fixo dos cards*/
+  height: 310px;
+  display: inline-block;
+  background-color: white;
+  /*border-width: 2px;*/
+  padding-left: 0;
+  /*border-style: solid;*/
+  border-radius: 10px;
+
+  /*card effect*/
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.exercise-card:hover {
+    box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+.exercise-card img{
+  border-radius: 5px 5px 0 0;
+  width:100%;
+}
+
+.card-container{
+  padding: 2px 16px;
+}
+
+/**/
 
 #messages 
 { 
