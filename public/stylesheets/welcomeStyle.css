@@ -43,7 +43,7 @@ body
  {	
  	position: fixed;
  	text-align: center;
- 	font-size: 30px;
+ 	font-size: 40px;
  	word-wrap: break-word;
  	border-radius: 50%;
  	width: 300px;
@@ -53,15 +53,15 @@ body
   	margin-top: -150px;
  	margin-left: -150px;
     background-color: white;
-    animation-name: glowingAura;
     
+    animation-name: glowingAura;
     animation-duration: .8s;
     animation-iteration-count: infinite;
 }
 
 .circle p
-{
-	padding-top: 80px;
+{	
+	padding-top: 18%;
 }
 
 .welcome
@@ -86,11 +86,52 @@ body
   min-width:1600px;
   position: fixed;
   bottom: 0;
-  z-index: -1;
+  z-index: 1;
 
   border-style: solid;
   border-width:0px;
   
+}
+
+#turing
+{
+	opacity: 0.5;
+	width: 450px;
+	height: 450px;
+	float: left;
+	position: absolute;
+	bottom: 0; 
+	left: 0;
+	z-index: -50;
+
+	animation-name: godSpirit;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#dijkstra
+{
+	opacity: 0.5;
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	bottom: 0; 
+	right: 0;
+	float: right;
+	z-index: -50;
+
+	animation-name: godSpirit;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes godSpirit 
+{
+    0%   {opacity: 0.3;}
+    /*25%  {box-shadow: 0px 0px 5px 3px yellow;}*/
+    50%  {opacity: 0.2;}
+    /*75%  {box-shadow: 0px 0px 5px 3px yellow;}*/
+    100% {opacity: 0.3;}
 }
 
 /*trecos do form*/
@@ -101,6 +142,7 @@ form
 	bottom: 0; 
 	width: 100%;
 	margin-top: 100px;
+	z-index: 100;
 
 }
 
