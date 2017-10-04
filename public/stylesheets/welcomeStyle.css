@@ -64,18 +64,25 @@ body
 	padding-top: 18%;
 }
 
+#trdmrk
+{
+	padding-top: 5px;
+	text-align: center;
+	color: rgba(0,0,0,0.6);
+}
+
 .welcome
 {
 	font-size: 40px;
 	color: white;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 5px;
 	text-shadow: 2px 2px rgba(0,0,0,0.5); 
 }
 
 .welcome p
 {
-	padding-top: 25px;
+	padding-top: 15px;
 }
 
 #myCanvas

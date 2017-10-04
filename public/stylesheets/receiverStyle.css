@@ -32,13 +32,16 @@ body
 {
 	word-wrap: break-word;
 	font-family: 'Ubuntu', sans-serif;
+	margin-top: 50px;
 }
 
 
-.exercise-card{
+.exercise-card
+{
+  vertical-align: top;
   margin: 5px 10px; /* separar os card do top (5px) e um do outro (25px)*/
   width: 250px; /* tamanho fixo dos cards*/
-  height: 310px;
+  height: 250px;
   display: inline-block;
   background-color: white;
   /*border-width: 2px;*/
@@ -66,13 +69,10 @@ body
 
 /**/
 
-#messages 
+#msgRecvd
 { 
-	list-style-type: none; 
-	margin: 10px; 
+	margin: 5px; 
 	padding: 10px; 
-	border-radius: 5px;
-	/*background-color: white;*/
 }
 
 .msgtext
@@ -97,14 +97,3 @@ body
 {
 	box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.3);
 }
-
-#messages li 
-{ 
-	padding: 5px 10px; 
-}
-
-/*
-#messages li:nth-child(odd) 
-{ 
-	background: #eee; 
-}*/
