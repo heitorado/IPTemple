@@ -3,7 +3,10 @@ var socket = io();
 
 //trata o recebimento da propagação do evento pelo servidor
 socket.on('chat message', function(msg){
-  $('#msgCards').append($('<div class="exercise-card">').append($('<div class="card-container">')).append($('<h4><b>Prece recebida:</b></h4>')).append($('<div id="msgRecvd"></div>').append($('<p></p>').text(msg))));
+
+	var newCard = $('<div class="exercise-card">').append($('<div class="card-container">')).append($('<h4><b>Prece recebida:</b></h4>')).append($('<div id="msgRecvd"></div>').append($('<p></p>').text(msg)));
+  
+ 	$(newCard).hide().appendTo('#msgCards').fadeTo(100,1);
 
 
   console.log(msg);

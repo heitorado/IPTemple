@@ -28,6 +28,14 @@ body
 	width: 100%;
 }
 
+#sidebar
+{
+	text-align: center;
+	position: fixed;
+	background: white;
+	height: 100%;
+}
+
 #msgCards
 {
 	word-wrap: break-word;
@@ -43,6 +51,7 @@ body
   width: 250px; /* tamanho fixo dos cards*/
   height: 250px;
   display: inline-block;
+  float: left;
   background-color: white;
   /*border-width: 2px;*/
   padding-left: 0;
