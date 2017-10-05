@@ -100,6 +100,16 @@ body
   
 }
 
+#confirmation
+{
+	padding-top: 20%;
+	font-size: 26px;
+	font-family: 'Ubuntu', sans-serif;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px rgba(0,0,0,0.5); 
+}
+
 #turing
 {
 	opacity: 0.5;

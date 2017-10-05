@@ -1,6 +1,8 @@
 
 var socket = io();
 
+
+
 //trata o recebimento da propagação do evento pelo servidor
 socket.on('chat message', function(msg){
 
@@ -10,5 +12,16 @@ socket.on('chat message', function(msg){
 	$('#msgCards').append($('<hr></hr><p></p>').text(msg)).fadeTo(100,1);
 
   console.log(msg);
-  window.scrollBy(0, 1000000000); //desce a janela
+  //window.scrollBy(0, 1000000000); //desce a janela
 });
+
+/*animations*/
+
+function main()
+{
+	$('#messages').hide();
+	$('#messages').fadeTo(1000, 1);
+}
+
+
+$(document).ready(main);

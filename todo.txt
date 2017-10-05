@@ -4,3 +4,4 @@
 >sistema de login para monitores
 >colocar scroll bar nos cards de mensagem ou deixar o tamanho dinamico conforme mensagem recebida
 >pagina de envio desabilitada quando a pagina de recebimento nao está aberta.
+>persistencia de mensagem

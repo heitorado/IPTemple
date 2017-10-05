@@ -5,12 +5,20 @@ $(function() {
   var socket = io();
   $('form').submit(function()
   {
+
+    $('.cfmsg').remove();
+
   	console.log($('#m').val());
   	if ($('#m').val()) 
   	{
   		socket.emit('chat message', $('#m').val());
-    		$('#m').val('');
-    		return false;
+    	$('#m').val('');
+      $('#confirmation').hide();
+      $('#confirmation').append('<p class="cfmsg">Prece enviada com sucesso!</p>');
+      $('#confirmation').fadeTo(500,1);
+      $('#confirmation').fadeTo(2000,0);
+      
+    	return false;
   	}
   	return false;
   });
@@ -22,3 +30,15 @@ $(function() {
     window.scrollBy(0, 1000000000); //desce a janela
   });*/
 });
+
+
+/*animations*/
+
+function main()
+{
+  $('.welcome').hide();
+  $('.welcome').fadeTo(600, 1);
+}
+
+
+$(document).ready(main);
