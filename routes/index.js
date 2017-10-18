@@ -10,4 +10,8 @@ router.get('/homemade-Dynamite', function(req, res){
 					res.render('templeMessages', { title: 'IP Temple' });
 					});
 
+router.get('/testpage2556', function(req, res){
+					res.render('templeMessages_beta', { title: 'IP Temple' });
+					});
+
 module.exports = router;
