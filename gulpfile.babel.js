@@ -11,6 +11,7 @@
 import run from 'run-sequence';
 import gulp from 'gulp';
 import liveServer from 'gulp-live-server';
+import browserSync from 'browser-sync';
 import babel from 'gulp-babel';
 
 const paths = {
@@ -21,6 +22,7 @@ const paths = {
   dest: 'dist'
 };
 
+let browserSyncInstance = browserSync.create();
 let server = liveServer('./bin/www',{env: {NODE_ENV: 'development'}});
 
 //Transform back-end ES6 to ES5
@@ -37,12 +39,16 @@ gulp.task('babel', cb => {
 */
 gulp.task('start', () => {  
   server.start();
+  browserSyncInstance.init({    
+    proxy: '127.0.0.1:3000/',
+    port: '7000'
+  });
 });
 /*
   Restart
 */
 gulp.task('restart', (file) =>{
-  server.notify.apply(server, [file]);
+  server.notify.apply(server, [file]);  
 });
 
 /*
@@ -55,6 +61,11 @@ gulp.task('watch', cb => {
     ], function(file){
       console.log('\x1b[33m%s\x1b[0m', 'changed file: ' + file.path);
       server.start.bind(server)();
+      setTimeout(() => {
+        browserSyncInstance.reload({
+          stream: false
+        });
+      }, 500);
     });
 });
 
