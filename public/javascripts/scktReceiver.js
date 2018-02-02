@@ -10,8 +10,9 @@ socket.on('chat message', function(msg){
   
  	//$(newCard).hide().appendTo('#msgCards').fadeTo(100,1);
 	$('#msgCards').append($('<hr></hr><p></p>').text(msg)).fadeTo(100,1);
+	
 
-  console.log(msg);
+  console.log('scktReceiver.js -> ' + msg);
   //window.scrollBy(0, 1000000000); //desce a janela
 });
 
@@ -19,6 +20,9 @@ socket.on('chat message', function(msg){
 
 function main()
 {
+	//ao carregar o documento, emite dizendo que é o receptor.
+	socket.emit('server connected');
+
 	$('#messages').hide();
 	$('#messages').fadeTo(1000, 1);
 }

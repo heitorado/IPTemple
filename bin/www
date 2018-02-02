@@ -28,19 +28,33 @@ var server = http.createServer(app);
 */
 
 var io = require('socket.io')(server);
-io.on('connection', function(socket){
-  console.log('usuario se conectou');
 
-  //trata o evento 'chat message' disparado pelo client
+
+
+io.on('connection', function(socket)
+{
+  //ao receptor se conectar, avisa e recupera todas as mensagens do banco.
+  socket.on('server connected', function(){
+    console.log("servidor se conectou");
+    var allMsg = db.getAllMessages();
+    io.emit('load complete', allMsg);
+  });
+  
+
+
+  //Ao receber o evento chat message, salva no banco de dados e envia para o receptor atraves do emit.
   socket.on('chat message', function(msg){    
-    db.saveMessage('untracked', msg);
+    
+    db.saveMessage('Anon: ', msg);
     console.log('msg: ' + msg);
-    //emite o evento chat message para todos os conectados carregando a msg 'msg';
+
     io.emit('chat message', msg);
+    
   });
 
+  //Avisa quando usuário se desconectar.
   socket.on('disconnect', function(){
-  console.log('user disconnected');
+    console.log('usuario desconectou');
   }); 
 });
 
