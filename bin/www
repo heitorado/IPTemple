@@ -36,8 +36,11 @@ io.on('connection', function(socket)
   //ao receptor se conectar, avisa e recupera todas as mensagens do banco.
   socket.on('server connected', function(){
     console.log("servidor se conectou");
-    var allMsg = db.getAllMessages();
-    io.emit('load complete', allMsg);
+    
+    db.getAllMessages().then(function(result){
+      io.emit('load db', result.val());
+    });
+   
   });
   
 
@@ -45,10 +48,11 @@ io.on('connection', function(socket)
   //Ao receber o evento chat message, salva no banco de dados e envia para o receptor atraves do emit.
   socket.on('chat message', function(msg){    
     
-    db.saveMessage('Anon: ', msg);
-    console.log('msg: ' + msg);
+    var key = db.saveMessage('Anon: ', msg)
+    
+    console.log("received the key: " + key);
 
-    io.emit('chat message', msg);
+    io.emit('new message', msg, key);
     
   });
 

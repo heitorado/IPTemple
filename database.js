@@ -28,6 +28,7 @@ exports.saveMessage = function(from, message){
 */
 //FIREBASE CONN
 var firebase = require('firebase');
+
 var config = {
   apiKey: "AIzaSyCJhH-aswyuNOkTYzQaZ8C1j__-A5PSKqA",
   authDomain: "monitoriaiptemple.firebaseapp.com",
@@ -41,7 +42,7 @@ var database = firebase.database();
 //END FIREBASE
 
 
-
+//maybe a problem with return here???
 exports.saveMessage = function(from, msg){
     console.log(from, msg);
 
@@ -55,6 +56,8 @@ exports.saveMessage = function(from, msg){
     });
 
     return msgKey;
+
+  
 };
 
 exports.deleteMessage = function(msgKey){
@@ -66,12 +69,41 @@ exports.deleteMessage = function(msgKey){
     firebase.database().ref('messages/' + msgKey).remove();
 };
 
+/*exports.getAllMessages = function(){
+    console.log('fetching all messages in database...');
+    var allMsgs;
+
+    firebase.database().ref('messages/').once('value').then(function(snapshot){
+        //console.log("snapshot val");
+        //console.log(snapshot.val());
+        allMsgs = snapshot;
+    });
+
+    return allMsgs;
+}*/
+
+
+/*exports.getAllMessages = function(){
+    console.log('fetching all messages in database...');
+    var allMsgs;
+    
+    new Promise (function(resolve, reject){ 
+        resolve(
+            firebase.database().ref('messages/').once('value').then(function(snapshot){
+                //console.log("snapshot val");
+                //console.log(snapshot.val());
+                allMsgs = snapshot;
+                console.log("i got all messages");
+            })
+        );
+    }).then(console.log("promessa resolvida"));
+
+   // return allMsgs;
+}*/
+
 exports.getAllMessages = function(){
     console.log('fetching all messages in database...');
+        
+    return firebase.database().ref('messages/').once('value');
 
-    var msgsRef = firebase.database().ref('messages/');
-    msgsRef.on('value', function(snapshot){
-        console.log(snapshot.val());
-    });
 }
-
