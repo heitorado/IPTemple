@@ -30,7 +30,7 @@ exports.saveMessage = function(from, message){
 var firebase = require('firebase');
 
 var config = {
-  apiKey: "AIzaSyCJhH-aswyuNOkTYzQaZ8C1j__-A5PSKqA",
+  apiKey: "",
   authDomain: "monitoriaiptemple.firebaseapp.com",
   databaseURL: "https://monitoriaiptemple.firebaseio.com",
   projectId: "monitoriaiptemple",
